@@ -53,11 +53,11 @@
                 <p>Напиши мне <a onclick="document.getElementById('easter_egg').innerHTML = 'Вы нашли пасхалку в '+ Date()"> <span class="red_smth"> <u>в</u> </span></a> <a href="t.me/no_choice">Telegram</a>.</p>
             </footer>
             <p id="easter_egg"> </p>
-
             <p id='easter_egg_help' onclick="alertBox();"></p>
     </section>
 
     <script>
+        "use strict";
         function alertBox()
         {
             alert("Здесь можно найти пасхалку. Поищи странности");
@@ -75,7 +75,11 @@
             text += inv;
             }
         }
-        showHelpLabel();
+        showHelpLabel()
+            .then((response) => 
+                {console.log("Всё прошло нормально");})
+            .catch((error)   => 
+                {console.log("Не всё прошло нормально")});
     </script>
 </body>
 </html>
