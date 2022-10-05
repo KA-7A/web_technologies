@@ -2,42 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-<style>
-    :root, a{
-        color: white;
-        font-size: 15pt;
-        line-height: 1;
-        font-family: Andale Mono, monospace;
-    }
-    h {
-    	font-size: 2em;
-        font-weight: 600;
-    }
-    .positioned_2
-    {
-        text-align: center;
-    }
-    .positioned
-    {
-        position: relative;
-        left: 10%;
-        width: 80%;
-        text-align: justify;
-    }
-    easter_egg_help 
-    {
-        position: absolute;
-        top: 50vh;
-    }
-    .red_smth
-    {
-        color : rgb(190, 189, 189);
-    }
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css" type="text/css"/>
     
-  </style>
 </head>
 
-<body bgcolor=black >
+<body bgcolor=gray >
+    
     <section class="positioned">
             <h>RAMMSTEIN</h>
             <p >На этой страничке я буду в двух словах рассказывать о любимой группе моей юности: Rammstein</p>
@@ -56,32 +27,9 @@
             <p id="easter_egg"> </p>
             <p id='easter_egg_help' onclick="alertBox();"></p>
     </section>
-
-    <script>
-        "use strict";
-        function alertBox()
-        {
-            alert("Здесь можно найти пасхалку. Поищи странности");
-        }
-
-        async function showHelpLabel() {
-            let inv = "Click on me<br>"
-            let text = inv;
-            for (let i = 0; i < 3; i++){
-            let myPromise = new Promise(function(resolve) 
-                {
-                    setTimeout(function() {resolve(text);}, 5000);
-                });
-            document.getElementById("easter_egg_help").innerHTML = await myPromise;
-            text += inv;
-            }
-        }
-        showHelpLabel()
-            .then((response) => 
-                {console.log("Всё прошло нормально");})
-            .catch((error)   => 
-                {console.error(error)});
-    </script>
+    
+<script src="./script.js"></script>
+    
 </body>
 </html>
 
