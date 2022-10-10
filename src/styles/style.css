@@ -1,0 +1,32 @@
+<style>
+    :root, a{
+        color: white;
+        font-size: 15pt;
+        line-height: 1;
+        font-family: Andale Mono, monospace;
+    }
+    h {
+        font-size: 2em;
+        font-weight: 600;
+    }
+    .positioned_2
+    {
+        text-align: center;
+    }
+    .positioned
+    {
+        position: relative;
+        left: 10%;
+        width: 80%;
+        text-align: justify;
+    }
+    easter_egg_help 
+    {
+        position: absolute;
+        top: 50vh;
+    }
+    .red_smth
+    {
+        color : rgb(190, 189, 189);
+    }
+</style>
