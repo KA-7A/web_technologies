@@ -1,4 +1,4 @@
-package main
+package eq_solv
 
 import "math"
 import "math/rand"
