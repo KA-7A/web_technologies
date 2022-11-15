@@ -10,10 +10,11 @@ async function showHelpLabel() {
     for (let i = 0; i < 3; i++){
     let myPromise = new Promise(function(resolve) 
         {
-            setTimeout(function() {resolve(text);}, 5000);
+            setTimeout(function() {resolve(text);}, 1000);
         });
     document.getElementById("easter_egg_help").innerHTML = await myPromise;
     text += inv;
+    console.log("We are here, khm");
     }
 }
 showHelpLabel()

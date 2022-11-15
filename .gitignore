@@ -1,0 +1,5 @@
+solver/go.mod
+solver/solver.go
+calc/go.mod
+calc/main.go
+calc/quadratic_equation/equation_solver.go

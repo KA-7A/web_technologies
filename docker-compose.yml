@@ -1,15 +1,9 @@
 version: '3'
 services:
-   nginx:
-    image: nginx:latest
-    container_name: webserver
+  ind:
+    container_name: go_web_server
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./ssl:/ssl/
-      - ./src:/usr/share/nginx/html
-      - ./src/styles:/usr/share/nginx/html/styles
-
-    
+    - 8080:8080
